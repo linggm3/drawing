@@ -22,8 +22,10 @@ speedups = [group["values"][0] / group["values"][1] for group in data]
 bar_width = 0.35
 index = range(len(data))
 
+# 创建一个图形和子图
 fig, ax = plt.subplots(figsize=(12, 4))  # 调整图形大小
 
+# 定义两种颜色
 color2 = "#ff7f0e"  # 橙色
 color1 = "#1f77b4"  # 蓝色
 
@@ -50,13 +52,17 @@ ax.set_ylabel("Test Time (hours)", fontsize=16)
 ax.set_xticks(index)
 ax.set_xticklabels([f"{group['title']}" for group in data], rotation=0, ha="center", fontsize=12)
 
-
+# 添加网格线
 ax.grid(axis="y", linestyle="--", alpha=0.7)
+
+# 添加图例
 ax.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=color1, label="LongBench"),
                    plt.Rectangle((0, 0), 1, 1, color=color2, label="MiniLongBench")],
           loc="upper right", fontsize=12)
 
+# 调整布局
 plt.tight_layout()
 
+# 显示图形
 # plt.savefig('fig1_lowcost_v2.pdf', format='pdf', dpi=1000)
 plt.show()

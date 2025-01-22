@@ -12,6 +12,7 @@ y2 = yyy[1][target_set][:11]  # reduce 98%
 y3 = yyy[2][target_set][:11]  # reduce 95%
 
 
+# 创建图形和轴
 plt.figure(figsize=(10, 6))  # 设置图形大小
 
 # 绘制折线图
@@ -24,12 +25,16 @@ plt.title("D", fontsize=16, fontweight="bold")  # 图表标题
 plt.xlabel("D", fontsize=14)  # X轴标签
 plt.ylabel("Spearman Correlation", fontsize=14)  # Y轴标签
 
+# 添加图例
 plt.legend(fontsize=12)
 
+# 添加网格
 plt.grid(color="gray", linestyle="--", linewidth=0.5, alpha=0.7)
 
+# 自定义刻度字体大小
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
 
+# 显示图表
 plt.tight_layout()  # 自动调整布局
 plt.show()

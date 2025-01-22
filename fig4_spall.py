@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import pickle
 from scipy.stats import pearsonr
 
 with open('pickle_data/whole_sub_pred_score.pkl', 'rb') as f:
@@ -17,16 +18,10 @@ with open('pickle_data/train_sub_score.pkl', 'rb') as f:
     train_sub_score = pickle.load(f)
 with open('pickle_data/whole_sub_sp.pkl', 'rb') as f:
     whole_sub_sp = pickle.load(f)
-with open('pickle_data/whole_corr.pkl', 'rb') as f:
-    whole_corr = pickle.load(f)
 with open('pickle_data/test_sub_sp.pkl', 'rb') as f:
     test_sub_sp = pickle.load(f)
-with open('pickle_data/test_corr.pkl', 'rb') as f:
-    test_corr = pickle.load(f)
 with open('pickle_data/train_sub_sp.pkl', 'rb') as f:
     train_sub_sp = pickle.load(f)
-with open('pickle_data/train_corr.pkl', 'rb') as f:
-    train_corr = pickle.load(f)
     
 sub_scenarios = ['Single-Document QA', 'Multi-Document QA', 'Summarization', 'Few-shot Learning', 'Code Completion', 'Synthetic Task']
 fig, axs = plt.subplots(2, 3, figsize=(10, 6))
