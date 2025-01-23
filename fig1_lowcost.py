@@ -2,12 +2,14 @@ import matplotlib.pyplot as plt
 
 # 数据
 data = [
-#     {"title": "llama-30b", "values": [81184.65519, 3668.957943]},
-    {"title": "FAKE", "values": [50000.84708, 2250.655876]},
-    {"title": "Loyal-Macaroni-Maid-7B", "values": [36739.84708, 1776.655876]},
-    {"title": "Kunoichi-7B", "values": [37523.10977, 1780.510724]},
-    {"title": "Kunoichi-7B", "values": [37523.10977, 1780.510724]},
-    {"title": "Kunoichi-7B", "values": [37523.10977, 1780.510724]}
+    {"title": "llama-30b", "values": [81184.65519, 3668.957943]},
+    {"title": "30B-Epsilon(x)", "values": [81184.65519, 3668.957943]},
+    {"title": "LwQ-30B-Instruct(x)", "values": [81184.65519, 3668.957943]},
+    {"title": "OPT-30B-Erebus(x)", "values": [81184.65519, 3668.957943]},
+    {"title": "Wizard-Vicuna-30B(x)", "values": [50000.84708, 2250.655876]},
+    
+#     {"title": "Loyal-Macaroni-Maid-7B", "values": [36739.84708, 1776.655876]},
+#     {"title": "Kunoichi-7B", "values": [37523.10977, 1780.510724]},
 ]
 
 
@@ -64,5 +66,5 @@ ax.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=color1, label="LongBench"),
 plt.tight_layout()
 
 # 显示图形
-# plt.savefig('fig1_lowcost_v2.pdf', format='pdf', dpi=1000)
+plt.savefig('fig1_lowcost_v2.pdf', format='pdf', dpi=1000)
 plt.show()

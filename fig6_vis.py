@@ -10,10 +10,9 @@ with open(r"pickle_data/kmeans.pkl", 'rb') as f:
     kmeans = pickle.load(f)
 with open(r"pickle_data/X_tsne.pkl", 'rb') as f:
     X_tsne = pickle.load(f)
-# subscenarios_position, kmeans, X_tsne
 
 # 设置颜色映射表
-colors = ['#FF0000', '#000000']  # 红色和黑色
+colors = ['#FF6347', '#4682B4', '#2E8B57', '#FFD700', '#9400D3', '#FF1493']  # 使用多种颜色
 
 # 创建一个 1x3 的子图布局
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))  # 调整整体图的大小
@@ -28,20 +27,24 @@ for idx, i in enumerate(to_paint_scenarios):
 
     # 绘制子图
     ax = axes[idx]  # 选择当前子图
-    ax.scatter(X_tsne[others, 0], X_tsne[others, 1], color=colors[1], label="Others", s=15)
-    ax.scatter(X_tsne[task, 0], X_tsne[task, 1], color=colors[0], label="Task", s=50)
+    ax.scatter(X_tsne[others, 0], X_tsne[others, 1], color=colors[1], label="Other samples", s=15, alpha=0.5)
+    ax.scatter(X_tsne[task, 0], X_tsne[task, 1], color=colors[0], label="Samples in this scenario", s=50, alpha=0.8)
 
     strr = list(subscenarios_position['longbench'].keys())[i]
     # 添加标题和标签
-    ax.set_title(strr, fontsize=14)
+    ax.set_title(strr, fontsize=14, fontweight='bold')
     ax.set_xlabel('t-SNE Component 1', fontsize=12)
     ax.set_ylabel('t-SNE Component 2', fontsize=12)
 
     # 添加图例
-    ax.legend(fontsize=10)
+    ax.legend(fontsize=10, loc='upper left')
+
+    # 添加网格线
+    ax.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.5)
 
 # 调整子图之间的间距
 plt.tight_layout()
 
 # 显示整个图
 plt.savefig('fig6_vis.pdf', format='pdf', dpi=1000)
+plt.show()
