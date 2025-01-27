@@ -2,14 +2,11 @@ import matplotlib.pyplot as plt
 
 # 数据
 data = [
-    {"title": "llama-30b", "values": [81184.65519, 3668.957943]},
-    {"title": "30B-Epsilon(x)", "values": [81184.65519, 3668.957943]},
-    {"title": "LwQ-30B-Instruct(x)", "values": [81184.65519, 3668.957943]},
-    {"title": "OPT-30B-Erebus(x)", "values": [81184.65519, 3668.957943]},
-    {"title": "Wizard-Vicuna-30B(x)", "values": [50000.84708, 2250.655876]},
-    
-#     {"title": "Loyal-Macaroni-Maid-7B", "values": [36739.84708, 1776.655876]},
-#     {"title": "Kunoichi-7B", "values": [37523.10977, 1780.510724]},
+    {"title": "OPT-30B", "values": [117416.9446349144, 5506.411338210106]},
+    {"title": "Wizard-Vicuna-30B", "values": [86184.07769799232, 3739.5837592482567]},
+    {"title": "Llama-30b", "values": [81184.65519, 3668.957943]},
+    {"title": "LwQ-30B-Instruct", "values": [50827.334570884705, 2221.5285658836365]},
+    {"title": "30B-Epsilon", "values": [44129.17699813843, 2086.7631709575653]},
 ]
 
 
