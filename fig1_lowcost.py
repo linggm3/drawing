@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 
 # 数据
 data = [
-    {"title": "OPT-30B", "values": [117416.9446349144, 5506.411338210106]},
+    {"title": "OPT-30B", "values": [104370.61745325725, 4894.587856186761]},
     {"title": "Wizard-Vicuna-30B", "values": [86184.07769799232, 3739.5837592482567]},
     {"title": "Llama-30b", "values": [81184.65519, 3668.957943]},
-    {"title": "LwQ-30B-Instruct", "values": [50827.334570884705, 2221.5285658836365]},
-    {"title": "30B-Epsilon", "values": [44129.17699813843, 2086.7631709575653]},
+    {"title": "LwQ-30B-Instruct", "values": [68616.90167069435, 2999.06356394291]},
+    {"title": "30B-Epsilon", "values": [59574.388947486885, 2817.130280792713]},
 ]
 
 
@@ -44,7 +44,7 @@ for i, group in enumerate(data):
 
 # 添加加速倍数标签
 for i, speedup in enumerate(speedups):
-    ax.text(i+0.18, min(values_in_hours) + 2, f"{speedup:.2f}x", ha="center", va="bottom", fontsize=10, color="red", fontweight="bold")
+    ax.text(i+0.18, min(values_in_hours) + 4, f"{speedup:.2f}x", ha="center", va="bottom", fontsize=10, color="red", fontweight="bold")
 
 # 添加标题和标签
 ax.set_ylabel("Test Time (hours)", fontsize=16)
