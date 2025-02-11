@@ -29,9 +29,9 @@ ax2.grid(axis='y', linestyle='--', alpha=0.7)
 
 
 ax3 = fig.add_subplot(gs[1, 1])  
-# 全 0 初始化，标准正态分布随机初始化，木有 beta
-categories3 = ['0', 'random', 'no beta']  
-values3 = [0.9499061913696062,0.9409005628517825, 0.9127579737335836]
+# 全 0 初始化，标准正态分布随机初始化，[-1, 1] 均匀分布，木有 beta
+categories3 = ['0', 'randn', 'rand', 'no beta']  
+values3 = [0.9499061913696062,0.9409005628517825, 0.9352720450281428, 0.9127579737335836]
 ax3.bar(categories3, values3, color='salmon', edgecolor='black', alpha=0.8)
 # ax3.set_title('Spearman Correlation vs. Initialization Method', fontsize=14, fontweight='bold')
 ax3.set_xlabel('Initialization Method', fontsize=12)
