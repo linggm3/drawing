@@ -8,8 +8,7 @@ def load_data(file_path):
     return np.array(data)
 
 # 加载数据并检查形状
-yyy = load_data(r'pickle_data/change_d.pkl')
-spsp = load_data(r'pickle_data/change_d_sp.pkl')
+spsp = load_data(r'pickle_data/change_train_llm_sub_sp.pkl')
 
 sub_scenarios = ['Single-Document QA', 'Multi-Document QA', 'Summarization', 'Few-shot Learning', 'Code Completion', 'Synthetic Task']
 
