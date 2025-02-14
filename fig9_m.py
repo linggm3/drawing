@@ -7,7 +7,7 @@ fig, axs = plt.subplots(2, 3, figsize=(12, 8))
 
 sub_scenarios = ['Single-Document QA', 'Multi-Document QA', 'Summarization', 'Few-shot Learning', 'Code Completion', 'Synthetic Task']
 
-with open('pickle_data/change_number.pkl', 'rb') as f:
+with open('pickle_data/change_train_llm_num_sub_sp_avg.pkl', 'rb') as f:
     data = pickle.load(f)
     
 # 柱子的标签
@@ -19,7 +19,7 @@ for i in range(2):
         # 获取当前子图的索引
         index = i * 3 + j
         # 绘制柱状图
-        bars = axs[i, j].bar(labels, data[index], color=plt.cm.viridis(np.linspace(0, 1, len(data[index]))))
+        bars = axs[i, j].bar(labels, data[:, index], color=plt.cm.viridis(np.linspace(0, 1, len(data[index]))))
         
         # 添加数据标签
         for bar in bars:
